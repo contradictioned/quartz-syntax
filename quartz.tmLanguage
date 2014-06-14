@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>qrz</string>
+	</array>
+	<key>name</key>
+	<string>Quartz</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Numbers, TODO: which types are supported?</string>
+			<key>match</key>
+			<string>\b((-)?\d+(\.\d+)?)\b</string>
+			<key>name</key>
+			<string>constant.numeric.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Compiler directives</string>
+			<key>match</key>
+			<string>\b(package|import|macro)\b</string>
+			<key>name</key>
+			<string>keyword.other.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Single line comments</string>
+			<key>match</key>
+			<string>//.*$</string>
+			<key>name</key>
+			<string>comment.line.number-sign.quartz</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\bmodule\b</string>
+			<key>comment</key>
+			<string>Module declaration</string>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>support.class.module.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- constants</string>
+			<key>match</key>
+			<string>\b(false|true|instant|inside|terminate|time)\b</string>
+			<key>name</key>
+			<string>constant.language.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- conversion</string>
+			<key>match</key>
+			<string>\b(nat2bv|int2bv|arr2bv|tup2bv|bv2nat|bv2int|nat2real|int2real)\b</string>
+			<key>name</key>
+			<string>support.function.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- bitvector operations</string>
+			<key>match</key>
+			<string>\b\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- compound types</string>
+			<key>match</key>
+			<string>\b\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- equality</string>
+			<key>match</key>
+			<string>\b(==|!=)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- numeric relations</string>
+			<key>match</key>
+			<string>\b(&lt;|&lt;=|&gt;|&gt;=)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- boolean operators</string>
+			<key>match</key>
+			<string>\b(!|not|&amp;|and|\||or|\^|xor|-&gt;|imp|&lt;-&gt;|eqv)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- arithmetic operators</string>
+			<key>match</key>
+			<string>\b(\+|-|\*|/|%|abs|sat)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- hybrid systems</string>
+			<key>match</key>
+			<string>\b(drv|cont)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- other operators</string>
+			<key>match</key>
+			<string>\b(sin|cos|exp|log|sizeOf)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- generic expressions</string>
+			<key>match</key>
+			<string>\b(exists|forall|sum)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Expressions -- misc. expressions</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Discrete actions</string>
+			<key>match</key>
+			<string>\b(next|emit|emit next|assume|assert)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Wait statements</string>
+			<key>match</key>
+			<string>\b(nothing|pause|halt|await)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Conditional statements</string>
+			<key>match</key>
+			<string>\b(if|else|choose|case|do|default)\b</string>
+			<key>name</key>
+			<string>keyword.control.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Sequential and parallel controll flow</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Loops</string>
+			<key>match</key>
+			<string>\b(loop|do|while|always|immediate always)\b</string>
+			<key>name</key>
+			<string>keyword.control.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Local declarations</string>
+			<key>match</key>
+			<string>\b(let)\b</string>
+			<key>name</key>
+			<string>keyword.control.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Generic statements</string>
+			<key>match</key>
+			<string>\b(for|do|choose)\b</string>
+			<key>name</key>
+			<string>keyword.control.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Module call</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Abortion statements</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Flow statements</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Continuous actions</string>
+			<key>match</key>
+			<string>\b(next)\b</string>
+			<key>name</key>
+			<string>support.function.source.quartz</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.quartz</string>
+	<key>uuid</key>
+	<string>f43b595a-700b-4f4f-a525-9c78c44d0254</string>
+</dict>
+</plist>
