@@ -1,20 +1,36 @@
 {
-	"schema_version": "1.2",
+	"schema_version": "2.0",
+
 	"packages": [
+
+		// This is what most packages should aim to model.
+		//
+		// The majority of the information about a package ("name",
+		// "description", "author") are all pulled from the GitHub (or
+		// BitBucket) repository info.
+		//
+		// If the word "sublime" exists in the repository name, the name can
+		// be overridden by the "name" key.
+		//
+		// A release is created from the the tag that is the highest semantic
+		// versioning version number in the list of tags.
+
+		// A release MUST contain a "sublime_text" version selector, use "*"
+		// for all versions. If you do not specify a release, it is defaulted
+		// to "*". See below for more detauls.
 		{
 			"name": "Quartz-Syntax",
 			"description": "Provides Quartz-Syntax for Sublime Text 2/3. Currently under development",
 			"author": "Manuel Hoffmann",
-			"homepage": "https://github.com/contradictioned/quartz-syntax",
-			"last_modified": "2014-06-15 23:22:00",
-			"platforms": {
-				"*": [
-					{
-						"version": "0.0.1",
-						"url": "https://nodeload.github.com/contradictioned/mips-syntax/zip/0.1"
-					}
-				]
-			}
-		}
+			"details": "https://github.com/contradictioned/quartz-syntax",
+			"issues": "https://github.com/contradictioned/quartz-syntax/issues",
+
+			"releases": [
+				{
+					"sublime_text": "*",
+					"details": "https://github.com/contradictioned/quartz-syntax/tags"
+				}
+			]
+		},
 	]
 }
