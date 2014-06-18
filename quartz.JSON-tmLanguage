@@ -19,127 +19,100 @@
       "comment": "Single line comments"
     }, // todo: multiline comments
     {
-      "name": "support.class.module.quartz",
-      "begin": "\\bmodule\\b",
-      "end": "}",
+      "name": "support.class.quartz",
+      "match": "\\bmodule\\b",
       "comment": "Module declaration"
     }, // todo: module als blöcke
+    {
+      "name": "storage.modifier.quartz",
+      "match": "\\b(mem|event|hybrid)\\b",
+      "comment": "storage"
+    },
+    {
+      "name": "support.other.quartz",
+      "match": "\\b(drivenby|satisfies)\\b",
+      "comment": "task"
+    },
+    {
+      "name": "support.other.quartz",
+      "match": "\\b(observer)\\b",
+      "comment": "observer"
+    },
+    {
+      "name": "storage.type.quartz",
+      "match": "\\b(bool|nat|nat{\\d+}|int|int{\\d+}|real|bv|bv{\\d+})\\b",
+      "comment": "Data types"
+    },
     {
       "name": "constant.language.quartz",
       "match": "\\b(false|true|instant|inside|terminate|time)\\b",
       "comment": "Expressions -- constants"
-    }, // done
+    },
     {
       "name": "support.function.quartz",
       "match": "\\b(nat2bv|int2bv|arr2bv|tup2bv|bv2nat|bv2int|nat2real|int2real)\\b",
       "comment": "Expressions -- conversion"
-    }, // todo klammern
+    },
     {
-      "name": "support.function.source.quartz",
-      "match": "\\b\\b",
-      "comment": "Expressions -- bitvector operations"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b\\b",
-      "comment": "Expressions -- compound types"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(==|!=)\\b",
-      "comment": "Expressions -- equality"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(<|<=|>|>=)\\b",
-      "comment": "Expressions -- numeric relations"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(!|not|&|and|\\||or|\\^|xor|->|imp|<->|eqv)\\b",
       "comment": "Expressions -- boolean operators"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(\\+|-|\\*|/|%|abs|sat)\\b",
       "comment": "Expressions -- arithmetic operators"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(drv|cont)\\b",
       "comment": "Expressions -- hybrid systems"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(sin|cos|exp|log|sizeOf)\\b",
       "comment": "Expressions -- other operators"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(exists|forall|sum)\\b",
       "comment": "Expressions -- generic expressions"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.operator.quartz",
       "match": "\\b(next)\\b",
       "comment": "Expressions -- misc. expressions"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "support.function.quartz",
       "match": "\\b(next|emit|emit next|assume|assert)\\b",
       "comment": "Discrete actions"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "support.function.quartz",
       "match": "\\b(nothing|pause|halt|await)\\b",
       "comment": "Wait statements"
-    }, // todo
+    },
     {
       "name": "keyword.control.quartz",
       "match": "\\b(if|else|choose|case|do|default)\\b",
       "comment": "Conditional statements"
-    }, // todo
+    },
     {
-      "name": "support.function.source.quartz",
+      "name": "keyword.control.quartz",
       "match": "\\b(next)\\b",
       "comment": "Sequential and parallel controll flow"
-    }, // todo
+    },
     {
       "name": "keyword.control.quartz",
       "match": "\\b(loop|do|while|always|immediate always)\\b",
       "comment": "Loops"
-    }, // todo
-    {
-      "name": "keyword.control.quartz",
-      "match": "\\b(let)\\b",
-      "comment": "Local declarations"
-    }, // todo
+    },
     {
       "name": "keyword.control.quartz",
       "match": "\\b(for|do|choose)\\b",
       "comment": "Generic statements"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(next)\\b",
-      "comment": "Module call"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(next)\\b",
-      "comment": "Abortion statements"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(next)\\b",
-      "comment": "Flow statements"
-    }, // todo
-    {
-      "name": "support.function.source.quartz",
-      "match": "\\b(next)\\b",
-      "comment": "Continuous actions"
-    } // todo
-    // Geneneral TODO: Proofs
+    }
   ],
-  "uuid": "f43b595a-700b-4f4f-a525-9c78c44d0254"
+  "uuid": "cc41f9c8-3040-43cd-8ff4-73a567dcba2b"
 }

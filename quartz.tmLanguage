@@ -35,14 +35,44 @@
 			<string>comment.line.number-sign.quartz</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>\bmodule\b</string>
 			<key>comment</key>
 			<string>Module declaration</string>
-			<key>end</key>
-			<string>}</string>
+			<key>match</key>
+			<string>\bmodule\b</string>
 			<key>name</key>
-			<string>support.class.module.quartz</string>
+			<string>support.class.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>storage</string>
+			<key>match</key>
+			<string>\b(mem|event|hybrid)\b</string>
+			<key>name</key>
+			<string>storage.modifier.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>task</string>
+			<key>match</key>
+			<string>\b(drivenby|satisfies)\b</string>
+			<key>name</key>
+			<string>support.other.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>observer</string>
+			<key>match</key>
+			<string>\b(observer)\b</string>
+			<key>name</key>
+			<string>support.other.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Data types</string>
+			<key>match</key>
+			<string>\b(bool|nat|nat{\d+}|int|int{\d+}|real|bv|bv{\d+})\b</string>
+			<key>name</key>
+			<string>storage.type.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -62,43 +92,11 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Expressions -- bitvector operations</string>
-			<key>match</key>
-			<string>\b\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Expressions -- compound types</string>
-			<key>match</key>
-			<string>\b\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Expressions -- equality</string>
-			<key>match</key>
-			<string>\b(==|!=)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Expressions -- numeric relations</string>
-			<key>match</key>
-			<string>\b(&lt;|&lt;=|&gt;|&gt;=)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Expressions -- boolean operators</string>
 			<key>match</key>
 			<string>\b(!|not|&amp;|and|\||or|\^|xor|-&gt;|imp|&lt;-&gt;|eqv)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -106,7 +104,7 @@
 			<key>match</key>
 			<string>\b(\+|-|\*|/|%|abs|sat)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -114,7 +112,7 @@
 			<key>match</key>
 			<string>\b(drv|cont)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -122,7 +120,7 @@
 			<key>match</key>
 			<string>\b(sin|cos|exp|log|sizeOf)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -130,7 +128,7 @@
 			<key>match</key>
 			<string>\b(exists|forall|sum)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -138,7 +136,7 @@
 			<key>match</key>
 			<string>\b(next)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.operator.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -146,7 +144,7 @@
 			<key>match</key>
 			<string>\b(next|emit|emit next|assume|assert)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>support.function.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -154,7 +152,7 @@
 			<key>match</key>
 			<string>\b(nothing|pause|halt|await)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>support.function.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -170,7 +168,7 @@
 			<key>match</key>
 			<string>\b(next)\b</string>
 			<key>name</key>
-			<string>support.function.source.quartz</string>
+			<string>keyword.control.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -182,56 +180,16 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Local declarations</string>
-			<key>match</key>
-			<string>\b(let)\b</string>
-			<key>name</key>
-			<string>keyword.control.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Generic statements</string>
 			<key>match</key>
 			<string>\b(for|do|choose)\b</string>
 			<key>name</key>
 			<string>keyword.control.quartz</string>
 		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Module call</string>
-			<key>match</key>
-			<string>\b(next)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Abortion statements</string>
-			<key>match</key>
-			<string>\b(next)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Flow statements</string>
-			<key>match</key>
-			<string>\b(next)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Continuous actions</string>
-			<key>match</key>
-			<string>\b(next)\b</string>
-			<key>name</key>
-			<string>support.function.source.quartz</string>
-		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.quartz</string>
 	<key>uuid</key>
-	<string>f43b595a-700b-4f4f-a525-9c78c44d0254</string>
+	<string>cc41f9c8-3040-43cd-8ff4-73a567dcba2b</string>
 </dict>
 </plist>
