@@ -1,0 +1,6 @@
+<snippet>
+	<description>Import directive</description>
+	<content><![CDATA[import ${1:pontedName};]]></content>
+	<tabTrigger>import</tabTrigger>
+	<scope>source.quartz</scope>
+</snippet>

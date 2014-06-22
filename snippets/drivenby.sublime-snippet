@@ -1,0 +1,8 @@
+<snippet>
+	<description>Drivenby declaration</description>
+	<content><![CDATA[drivenby ${1:name} {
+	${2:body}
+}]]></content>
+	<tabTrigger>drivenby</tabTrigger>
+	<scope>source.quartz</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Satisfies declaration</description>
+	<content><![CDATA[satisfies ${1:name} {
+	${2:body}
+}]]></content>
+	<tabTrigger>satisfies</tabTrigger>
+	<scope>source.quartz</scope>
+</snippet>

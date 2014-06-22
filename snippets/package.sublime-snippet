@@ -1,0 +1,6 @@
+<snippet>
+	<description>Package directive</description>
+	<content><![CDATA[package ${1:pontedName};]]></content>
+	<tabTrigger>package</tabTrigger>
+	<scope>source.quartz</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<description>Macro directive</description>
+	<content><![CDATA[macro ${1:body}
+}]]></content>
+	<tabTrigger>macro</tabTrigger>
+	<scope>source.quartz</scope>
+</snippet>
