@@ -4,11 +4,6 @@
   "patterns": [
     // We start with numeric constants
     {
-      "name": "constant.numeric.quartz",
-      "match": "\\b((-)?\\d+(\\.\\d+)?)\\b",
-      "comment": "Numbers, TODO: which types are supported?"
-    },
-    {
       "name": "keyword.other.quartz",
       "match": "\\b(package|import|macro)\\b",
       "comment": "Compiler directives"
@@ -60,8 +55,13 @@
     },
     {
       "name": "keyword.operator.quartz",
-      "match": "\\b(\\+|-|\\*|/|%|abs|sat)\\b",
+      "match": "(\\+|-|\\*|/|%|abs|sat)",
       "comment": "Expressions -- arithmetic operators"
+    },
+    {
+      "name": "constant.numeric.quartz",
+      "match": "\\b((-)?\\d+(\\.\\d+)?)\\b",
+      "comment": "Numbers, TODO: which types are supported?"
     },
     {
       "name": "keyword.operator.quartz",

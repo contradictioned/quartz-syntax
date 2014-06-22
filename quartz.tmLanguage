@@ -12,14 +12,6 @@
 	<array>
 		<dict>
 			<key>comment</key>
-			<string>Numbers, TODO: which types are supported?</string>
-			<key>match</key>
-			<string>\b((-)?\d+(\.\d+)?)\b</string>
-			<key>name</key>
-			<string>constant.numeric.quartz</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Compiler directives</string>
 			<key>match</key>
 			<string>\b(package|import|macro)\b</string>
@@ -102,9 +94,17 @@
 			<key>comment</key>
 			<string>Expressions -- arithmetic operators</string>
 			<key>match</key>
-			<string>\b(\+|-|\*|/|%|abs|sat)\b</string>
+			<string>(\+|-|\*|/|%|abs|sat)</string>
 			<key>name</key>
 			<string>keyword.operator.quartz</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numbers, TODO: which types are supported?</string>
+			<key>match</key>
+			<string>\b((-)?\d+(\.\d+)?)\b</string>
+			<key>name</key>
+			<string>constant.numeric.quartz</string>
 		</dict>
 		<dict>
 			<key>comment</key>
