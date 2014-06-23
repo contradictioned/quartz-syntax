@@ -7,17 +7,23 @@
       "name": "keyword.other.quartz",
       "match": "\\b(package|import|macro)\\b",
       "comment": "Compiler directives"
-    }, // todo das wort hintendran auch noch?
+    },
     {
-      "name": "comment.line.number-sign.quartz",
+      "name": "comment.line.double-slash.quartz",
       "match": "//.*$",
       "comment": "Single line comments"
-    }, // todo: multiline comments
+    },
+    {
+      "name": "comment.block.quartz",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "comment": "Multiline comments"
+    },
     {
       "name": "support.class.quartz",
       "match": "\\bmodule\\b",
       "comment": "Module declaration"
-    }, // todo: module als blöcke
+    },
     {
       "name": "storage.modifier.quartz",
       "match": "\\b(mem|event|hybrid)\\b",
